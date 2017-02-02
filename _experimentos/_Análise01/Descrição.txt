@@ -1,1 +1,0 @@
-Nessa análise são experimentos a mudança da quantidade de indivíduos e a quantidade de interações.
