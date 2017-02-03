@@ -1,0 +1,10 @@
+function parents = selectionGA(expectation,nParents,options)
+
+parents = selectionuniform(expectation,nParents-1,options);
+
+expectationTemp = c
+
+if (~ismember(min(expectation),parents))
+    [~,loc]=ismember(min(expectation),expectation);
+    parents = [parents loc];
+end

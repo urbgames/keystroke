@@ -41,3 +41,5 @@ partitionedModel = crossval(trainedClassifier, 'KFold', 10);
 
 % Compute validation accuracy
 validationAccuracy = kfoldLoss(partitionedModel, 'LossFun', 'ClassifError');
+
+%toc
