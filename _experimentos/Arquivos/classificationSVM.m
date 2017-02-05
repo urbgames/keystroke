@@ -33,7 +33,7 @@ response = data.user_id;
 classNames = unique(response)';
 
 % Train a classifier
-template = templateSVM('KernelFunction', 'linear', 'PolynomialOrder', [], 'KernelScale', 'auto', 'BoxConstraint', 1, 'Standardize', 1);
+template = templateSVM();
 trainedClassifier = fitcecoc(predictors, response, 'Learners', template, 'Coding', 'onevsone', 'PredictorNames', predictorNames, 'ResponseName', 'user_id', 'ClassNames', classNames);
 
 % Perform cross-validation
