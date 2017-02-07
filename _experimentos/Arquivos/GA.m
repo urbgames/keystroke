@@ -10,7 +10,7 @@ options = optimoptions(options,'MaxGenerations', MaxGenerations_Data);
 options = optimoptions(options,'MutationFcn', {  @mutationuniform [] });
 options = optimoptions(options,'Display', 'iter');
 options = optimoptions(options,'PlotFcn', {  @gaplotbestf @gaplotbestindiv @gaplotdistance });
-%options = optimoptions(options,'UseVectorized', false);
-%options = optimoptions(options,'UseParallel', true);
+options = optimoptions(options,'UseVectorized', false);
+options = optimoptions(options,'UseParallel', true);
 [x,fval,exitflag,output,population,score] = ...
 ga(@classificationSVM,nvars,[],[],[],[],[],[],[],[],options);
