@@ -13,4 +13,4 @@ options = optimoptions(options,'PlotFcn', {  @gaplotbestf @gaplotbestindiv @gapl
 options = optimoptions(options,'UseVectorized', false);
 options = optimoptions(options,'UseParallel', true);
 [x,fval,exitflag,output,population,score] = ...
-ga(@classificationSVM,nvars,[],[],[],[],[],[],[],[],options);
+ga(@ClassificationSVMGA,nvars,[],[],[],[],[],[],[],[],options);
