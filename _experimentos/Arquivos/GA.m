@@ -1,9 +1,8 @@
-function [x,fval,exitflag,output,population,score] = GA(nvars,PopulationSize_Data,MaxGenerations_Data)
-%% This is an auto generated MATLAB file from Optimization Tool.
+function [x,fval,exitflag,output,population,score] = GA(nvars,PopulationSize_Data,MaxGenerations_Data,FunctionTolerance_Data)
 
-%% Start with the default options
 options = optimoptions('ga');
-%% Modify options setting
+options = optimoptions(options,'MigrationDirection', 'both');
+options = optimoptions(options,'FunctionTolerance', FunctionTolerance_Data);
 options = optimoptions(options,'PopulationType', 'bitstring');
 options = optimoptions(options,'PopulationSize', PopulationSize_Data);
 options = optimoptions(options,'MaxGenerations', MaxGenerations_Data);
